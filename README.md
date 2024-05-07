@@ -1,9 +1,9 @@
 # WASCaseStudy1
 
-# Group Name
-  ## AWASP
+## Group Name
+  ### AWASP
 
-# Group Members
+## Group Members
   - Muhammad Azhad
   - Qoys Al Hanif
   - Saufi
