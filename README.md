@@ -17,7 +17,7 @@ AWASP
   - CSRF (Cross-Site Request Forgery)
   - Secured Cookies
 
-### Qoys Al Hanif ()
+### Qoys Al Hanif (2016863)
 - Identify, evaluate, and prevent vulnerabilities of:
   - Content Security Policy (CSP)
   - JavaScript Libraries
