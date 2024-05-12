@@ -9,32 +9,32 @@ AWASP
 - Saufi (2018781)
 
 ## Table of Contents
- - [Description of Case Study](#description-of-case-study)
- 1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting-used)
- 2. [Hash Disclosure](#2-hash-disclosure)
- 3. [CSRF (Cross-Site Request Forgery)](#3-csrf-cross-site-request-forgery)
- 4. [Secured Cookies](#4-secured-cookies)
- 5. [Content Security Policy (CSP)](#5-content-security-policy-csp)
- 6. [JavaScript Libraries](#6-javascript-libraries)
- 7. [HTTPS Implementation (TLS/SSL)](#7-https-implementation-tlsssl)
- 8. [Cookie Poisoning](#8-cookie-poisoning)
- 9. [Potential XSS (Cross-Site Scripting)](#9-potential-xss-cross-site-scripting)
- 10. [Information Disclosure](#10-information-disclosure)
+- [Description of Case Study](#description-of-case-study)
+ - 1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting-used)
+ - 2. [Hash Disclosure](#2-hash-disclosure)
+ - 3. [CSRF (Cross-Site Request Forgery)](#3-csrf-cross-site-request-forgery)
+ - 4. [Secured Cookies](#4-secured-cookies)
+ - 5. [Content Security Policy (CSP)](#5-content-security-policy-csp)
+ - 6. [JavaScript Libraries](#6-javascript-libraries)
+ - 7. [HTTPS Implementation (TLS/SSL)](#7-https-implementation-tlsssl)
+ - 8. [Cookie Poisoning](#8-cookie-poisoning)
+ - 9. [Potential XSS (Cross-Site Scripting)](#9-potential-xss-cross-site-scripting)
+ - 10. [Information Disclosure](#10-information-disclosure)
 
 ## Assigned Tasks
 - Muhammad Azhad (2015905)
-  ##### Server OS and Server-Side Scripting used 
-  ##### Hash Disclosure
-  ##### CSRF (Cross-Site Request Forgery)
-  ##### Secured Cookies
+  - Server OS and Server-Side Scripting used 
+  - Hash Disclosure
+  - CSRF (Cross-Site Request Forgery)
+  - Secured Cookies
 - Qoys Al Hanif (2016863)
-  ##### CSP
-  ##### JS Library
-  ##### HTTPS implentation (TLS/SSL)
+  - CSP
+  - JS Library
+  - HTTPS implentation (TLS/SSL)
 - Saufi (2018781)
-  ##### Cookie Poisoning
-  ##### Potential XSS
-  ##### Information Disclosure
+  - Cookie Poisoning
+  - Potential XSS
+  - Information Disclosure
 
 ## Description of Case Study
 
