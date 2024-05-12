@@ -10,7 +10,7 @@ AWASP
 
 ## Table of Contents
  - [Description of Case Study](#description-of-case-study)
- - [Server OS and Server-Side Scripting](#1.-server-os-and-server-side-scripting-used-windows-or-linux-php-or-aspnet-or-javascript-etc)
+ - [Server OS and Server-Side Scripting used](#1-server-os-and-server-side-scripting-used-windows-or-linux-php-or-aspnet-or-javascript-etc)
  - [Hash Disclosure](#2.-hash-disclosure)
  - [CSRF (Cross-Site Request Forgery)](#csrf-cross-site-request-forgery)
  - [Secured Cookies](#secured-cookies)
