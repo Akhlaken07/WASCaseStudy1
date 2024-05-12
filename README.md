@@ -40,7 +40,7 @@ AWASP
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
-  ### 1. Server OS and Server-Side Scripting used 
+  ## 1. Server OS and Server-Side Scripting used 
   - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
     - Identify:
         - URL: https://www.mbot.org.my/about-us/organization-structure/
@@ -104,7 +104,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
     - Reference
       - https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy
   
-  ### 2. Hash Disclosure
+  ## 2. Hash Disclosure
   - Hash Disclosure
     - Identify:
         - URL: https://www.mbot.org.my/MBOT/files/51/51541f6b-7e33-459d-a7e8-33264eae25ca.pdf
@@ -119,9 +119,9 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
         - Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser.
     - Reference
       - https://openwall.info/wiki/john/sample-hashes
-  ### 3. CSRF (Cross-Site Request Forgery) 
+  ## 3. CSRF (Cross-Site Request Forgery) 
   - No alert for this category
-  ### 4. Secured Cookies
+  ## 4. Secured Cookies
   - Cookie with Samesite Attribute None
     - Identify:
         - URL: https://www.mbot.org.my/sitemap.xml
@@ -154,7 +154,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
 
 ### Qoys Al Hanif (2016863)
 
-### 5. Content Security Policy (CSP)
+## 5. Content Security Policy (CSP)
 
 - Identify:
 
@@ -188,7 +188,7 @@ Reference:
 -   [https://www.invicti.com/blog/web-security/content-security-policy/](https://www.invicti.com/blog/web-security/content-security-policy/)
 -   [https://cwe.mitre.org/data/definitions/693.html](https://cwe.mitre.org/data/definitions/693.html)
 
-### 6. JavaScript Libraries
+## 6. JavaScript Libraries
 
 
 
@@ -239,7 +239,7 @@ References:
 -  [https://cwe.mitre.org/data/definitions/829.html](https://cwe.mitre.org/data/definitions/829.html)
 -  [https://beaglesecurity.com/blog/vulnerability/vulnerable-javascript-library.html](https://beaglesecurity.com/blog/vulnerability/vulnerable-javascript-library.html)
 
-### 7. HTTPS implementation (TLS/SSL)
+## 7. HTTPS implementation (TLS/SSL)
 
 - Identify:
   -   There is no alert found on OWASP ZAP and no risk level and CWE ID can be identified.
@@ -253,7 +253,7 @@ References:
 
 
 ## Saufi (2018781)
-  ### 8. Cookie Poisoning
+  ## 8. Cookie Poisoning
   - Identify: Reliance on Cookies without Validation and Integrity Checking
     - CWE ID: 565
     - Risk: Information (low)
@@ -281,7 +281,7 @@ References:
   - https://cwe.mitre.org/data/definitions/565.html
   - https://www.techtarget.com/searchsecurity/definition/cookie-poisoning
     
-  ### 9. Potential XSS (Cross-Site Scripting)
+  ## 9. Potential XSS (Cross-Site Scripting)
   - Identify: Protection Mechanism Failure
     - CWE ID: 693
     - Risk: Medium
@@ -331,7 +331,7 @@ References:
   Reference :
   - https://cwe.mitre.org/data/definitions/20.html
 
- ### 10. Information disclosure
+ ## 10. Information disclosure
   - Identify: Exposure of Sensitive Information to an Unauthorized Actor
     - CWE ID: 200
     - WASC ID: 13 (information leakage)
