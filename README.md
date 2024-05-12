@@ -10,7 +10,7 @@ AWASP
 
 ## Table of Contents
 - [Description of Case Study](#description-of-case-study)
-  1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting-used)
+  1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting)
   2. [Hash Disclosure](#2-hash-disclosure)
   3. [CSRF (Cross-Site Request Forgery)](#3-csrf-cross-site-request-forgery)
   4. [Secured Cookies](#4-secured-cookies)
@@ -40,7 +40,7 @@ AWASP
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
-  ## 1. Server OS and Server-Side Scripting used 
+  ## 1. Server OS and Server-Side Scripting  
   - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
     - Identify:
         - URL: https://www.mbot.org.my/about-us/organization-structure/
