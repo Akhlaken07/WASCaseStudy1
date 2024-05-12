@@ -9,7 +9,7 @@ AWASP
 - Saufi (2018781)
 
 ## Table of Contents
- - [Description of Case Study](#descriptionofcasestudy)
+ - [Description of Case Study](#description-of-case-study)
  - Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.) 
  - Hash Disclosure
  - CSRF (Cross-Site Request Forgery)
