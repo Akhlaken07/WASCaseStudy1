@@ -6,7 +6,7 @@ AWASP
 ## Group Members
 - Muhammad Azhad (2015905)
 - Qoys Al Hanif (2016863)
-- Saufi ()
+- Saufi (2018781)
 
 ## Table of Contents
 
@@ -201,7 +201,7 @@ References:
 
 
 
-## Saufi   
+## Saufi (2018781)
   ## Cookie Poisoning
   ### 1. Identify: Reliance on Cookies without Validation and Integrity Checking
   - CWE ID: 565
