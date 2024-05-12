@@ -14,18 +14,18 @@ AWASP
 
 ## Assigned Tasks
 - Muhammad Azhad (2015905)
-  1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
-  2. Hash Disclosure
-  3. CSRF (Cross-Site Request Forgery)
-  4. Secured Cookies
+  ##### 1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
+  ##### 2. Hash Disclosure
+  ##### 3. CSRF (Cross-Site Request Forgery)
+  ##### 4. Secured Cookies
 - Qoys Al Hanif (2016863)
-  5. CSP
-  6. JS Library
-  7. HTTPS implentation (TLS/SSL)
-- Saufi ()
-  8. Cookie Poisoning
-  9. Potential XSS
-  10. Information Disclosure
+  ##### 5. CSP
+  ##### 6. JS Library
+  ##### 7. HTTPS implentation (TLS/SSL)
+- Saufi (2018781)
+  ##### 8. Cookie Poisoning
+  ##### 9. Potential XSS
+  ##### 10. Information Disclosure
 
 
 ## Observation Result
