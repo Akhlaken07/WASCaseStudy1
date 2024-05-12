@@ -20,7 +20,7 @@ AWASP
         - Risk: Low
         - Confidence: Medium 
         - <img width="641" alt="Screenshot 2024-05-11 at 9 58 36 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/eecb2b41-b640-4e34-9166-fb0d209bf3a3">
-        -<img width="1005" alt="Screenshot 2024-05-11 at 10 10 51 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/ef04772a-628b-4ac4-bb05-0b8c6e9c1d2b">
+        - <img width="1005" alt="Screenshot 2024-05-11 at 10 10 51 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/ef04772a-628b-4ac4-bb05-0b8c6e9c1d2b">
     - Evaluate:
         - The web/application server is leaking information via one or more "X-Powered-By" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.
     - Prevention:
