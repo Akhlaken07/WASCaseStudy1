@@ -27,8 +27,43 @@ AWASP
         - Ensure that your web server, application server, load balancer, etc. is configured to suppress "X-Powered-By" headers.
 
   - Server Leaks Version Information via "Server" HTTP Response Header Field (Manual)
+    - Identify:
+        - URL: https://www.google-analytics.com/analytics.js
+        - CWE ID: 200 - Exposure of Sensitive Information to an Unauthorized Actor
+        - Risk: Low
+        - Confidence: High
+        - <img width="509" alt="Screenshot 2024-05-12 at 11 34 14 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/385854de-b697-442f-ac4d-e41185e83b57">
+        - <img width="575" alt="Screenshot 2024-05-12 at 11 28 13 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/777718e6-3604-4591-9107-5800b9f9cb23">
+    - Evaluate:
+        - The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.
+    - Prevention:
+        - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
   - Cross-Domain JavaScript Source File Inclusion
-  - Cross-Domain Misconfiguration (Manual) 
+    - Identify:
+        - URL: https://www.mbot.org.my/
+        - CWE ID: 829 - Inclusion of Functionality from Untrusted Control Sphere
+        - Risk: Low
+        - Confidence: Medium 
+        - <img width="382" alt="Screenshot 2024-05-11 at 10 18 26 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/3c2ff08f-281d-47a5-97b6-2ac17cb7f328">
+        - <img width="900" alt="Screenshot 2024-05-11 at 10 33 36 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/382d198b-1205-458b-ae1e-40dbc8defcdd">
+    - Evaluate:
+        - The page includes one or more script files from a third-party domain.
+    - Prevention:
+        - Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.headers.
+  - Cross-Domain Misconfiguration (Manual)
+    - Identify:
+        - URL: https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js
+        - CWE ID: 264 - Permissions, Privileges, and Access Controls
+        - Risk: Medium
+        - Confidence: Medium 
+        - <img width="382" alt="Screenshot 2024-05-11 at 10 18 26 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/3c2ff08f-281d-47a5-97b6-2ac17cb7f328">
+        - <img width="900" alt="Screenshot 2024-05-11 at 10 33 36 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/382d198b-1205-458b-ae1e-40dbc8defcdd">
+    - Evaluate:
+        - Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server
+        - The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.
+    - Prevention:
+        - Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).
+        - Configure the "Access-Control-Allow-Origin" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.
   
   #### Hash Disclosure
   #### CSRF (Cross-Site Request Forgery)
