@@ -8,8 +8,25 @@ AWASP
 - Qoys Al Hanif (2016863)
 - Saufi ()
 
-## Assigned Tasks
+## Table of Contents
 
+## Assigned Tasks
+- Muhammad Azhad (2015905)
+  - Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
+  - Hash Disclosure
+  - CSRF (Cross-Site Request Forgery)
+  - Secured Cookies
+- Qoys Al Hanif (2016863)
+  - CSP
+  - JS Library
+  - HTTPS implentation (TLS/SSL)
+- Saufi ()
+  - Cookie Poisoning
+  - Potential XSS
+  - Information Disclosure
+
+
+## Observation Result
 ### Muhammad Azhad (2015905)
 ### Identify, evaluate, and prevent vulnerabilities of:
   #### Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
@@ -158,13 +175,6 @@ The user input was: lng=en-US)
   - Disable directory listing to prevent exposure of web site structure and potentially sensitive files
   - Disable error reporting output into the client's browser
   - Use custom error pages that prevent from displaying excessive system information
-
-
-## Table of Contents
-
-## List of Figures
-
-## List of Tables
 
 ## References
 
