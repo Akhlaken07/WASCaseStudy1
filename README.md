@@ -37,7 +37,9 @@ AWASP
   10. [Information Disclosure](#10-information-disclosure)
 
 ## Description of Case Study
-  The case study required scanning the website https://www.mbot.org.my using appropriate tools such as ZAP. Below, alerts were identified, followed by evaluations and the preventive measures implemented for the vulnerabilities.
+  The Malaysia Board of Technology (MBOT) website, located at https://www.mbot.org.my, is the designated web application. In this case study, our team will use OWASP ZAP to manually and automatically scan the website in order to find any vulnerabilities in the web application. The vast number of webpages on the site means that we will primarily be concentrating on automated scanning.
+The table of contents lists the alerts that were observed. We will also indicate the level of risk associated with each alert and provide further details regarding the threat classification (CWE or CVE).
+
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
