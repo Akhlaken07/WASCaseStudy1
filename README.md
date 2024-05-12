@@ -10,20 +10,20 @@ AWASP
 
 ## Table of Contents
  - [Description of Case Study](#description-of-case-study)
- - [Server OS and Server-Side Scripting used](#1-server-os-and-server-side-scripting-used-windows-or-linux-php-or-aspnet-or-javascript-etc)
- - [Hash Disclosure](#2.-hash-disclosure)
- - [CSRF (Cross-Site Request Forgery)](#csrf-cross-site-request-forgery)
- - [Secured Cookies](#secured-cookies)
- - [CSP (Content Security Policy)](#csp)
- - [JS Library](#js-library)
- - [HTTPS Implementation (TLS/SSL)](#https-implementation-tlsssl)
- - [Cookie Poisoning](#cookie-poisoning)
- - [Potential XSS (Cross-Site Scripting)](#potential-xss-cross-site-scripting)
- - [Information Disclosure](#information-disclosure)
+ 1. [Server OS and Server-Side Scripting](#server-os-and-server-side-scripting-used)
+ 2. [Hash Disclosure](#hash-disclosure)
+ 3. [CSRF (Cross-Site Request Forgery)](#csrf-cross-site-request-forgery)
+ 4. [Secured Cookies](#secured-cookies)
+ 5. [Content Security Policy (CSP)](#content-security-policy-csp)
+ 6. [JavaScript Libraries](#javascript-libraries)
+ 7. [HTTPS Implementation (TLS/SSL)](#https-implementation-tlsssl)
+ 8. [Cookie Poisoning](#cookie-poisoning)
+ 9. [Potential XSS (Cross-Site Scripting)](#potential-xss-cross-site-scripting)
+ 10. [Information Disclosure](#information-disclosure)
 
 ## Assigned Tasks
 - Muhammad Azhad (2015905)
-  ##### 1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
+  ##### 1. Server OS and Server-Side Scripting used 
   ##### 2. Hash Disclosure
   ##### 3. CSRF (Cross-Site Request Forgery)
   ##### 4. Secured Cookies
@@ -40,7 +40,7 @@ AWASP
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
-  ### 1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
+  ### 1. Server OS and Server-Side Scripting used 
   - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
     - Identify:
         - URL: https://www.mbot.org.my/about-us/organization-structure/
