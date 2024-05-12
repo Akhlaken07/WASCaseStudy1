@@ -112,14 +112,15 @@ AWASP
   - CWE ID: 565
   - Risk: Information (low)
   - Source: Passive (10029 - Cookie Poisoning)
-
   - dentified at URL “https://www.mbot.org.my/accreditation/mbot-accredited-programmes” was vulnerable.
  
   Evaluate:
 
-    When carrying out security-critical tasks, the website depends on the usage or values of cookies, but it does not appropriately verify that the setting is valid for the corresponding user. Attackers may modify cookies by executing client-side code outside of the browser or from within the browser. If cookies are used without thorough validation and integrity testing, attackers may be able to perform injection attacks like SQL injection and cross-site scripting, bypass authentication, and alter inputs in other unanticipated ways.
+    When carrying out security-critical tasks, the website depends on the usage or values of cookies, but it does not appropriately verify that the setting is valid for the corresponding user. Attackers may modify cookies by executing client-side code outside of the browser or from within the browser. 
+    If cookies are used without thorough validation and integrity testing, attackers may be able to perform injection attacks like SQL injection and cross-site scripting, bypass authentication, and alter inputs in other unanticipated ways.
 
     In this case, An attacker may be able to poison cookie values through POST parameters. To test if this is a more serious issue, try resending that request as a GET, with the POST parameter included as a query string parameter.
+   
     - For instance:  https://nottrusted.com/page?value=maliciousInput.
     User-input was found in the following cookie:
     CMSPreferredCulture=en-US; expires=Tue, 06-May-2025 04:47:37 GMT; path=/; secure; HttpOnly
@@ -146,12 +147,12 @@ AWASP
     The website isn't provided with a protection mechanism, or it uses one improperly, which leaves it vulnerable to directed attacks.
     In this case, the Content Security Policy (CSP) Header Not Set) Content Security Policy (CSP) is an extra security layer that helps in the identification and prevention of specific attack types, such as data injection and Cross Site Scripting (XSS) attacks. Such attacks are used for a variety of purposes, including as malware transmission, site defacement, and data theft. With the help of a set of standard HTTP headers called CSP, website owners can specify which content sources—JavaScript, CSS, HTML frames, fonts, images, and embeddable objects like Java applets, ActiveX, audio, and video files—browsers are permitted to load on their page.
 
-    Related Attack Patterns: ![attackpattern](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/df2096a8-6715-42ec-9a3b-5e91b5edbda1)
+   Related Attack Patterns: ![attackpattern](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/df2096a8-6715-42ec-9a3b-5e91b5edbda1)
 
   Prevent:
   
     - Make that the Content-Security-Policy header is set on web server, application server, load balancer, etc. through configuration.
-    - for example: the <meta> element can be used to configure a policy ![csp](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/29c45a92-0b81-400b-b0a8-69428e3fe1de)
+   for example: the meta element can be used to configure a policy ![csp](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/29c45a92-0b81-400b-b0a8-69428e3fe1de)
  
   Reference:
   - https://cwe.mitre.org/data/definitions/693.html
