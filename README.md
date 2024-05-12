@@ -31,7 +31,7 @@ AWASP
 ## Observation Result
 ### Muhammad Azhad (2015905)
   ### 1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
-  a - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
+  - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
     - Identify:
         - URL: https://www.mbot.org.my/about-us/organization-structure/
         - CWE ID: 200 - Exposure of Sensitive Information to an Unauthorized Actor
@@ -44,7 +44,7 @@ AWASP
     - Prevention:
         - Ensure that your web server, application server, load balancer, etc. is configured to suppress "X-Powered-By" headers.
 
-  b - Server Leaks Version Information via "Server" HTTP Response Header Field (Manual)
+  - Server Leaks Version Information via "Server" HTTP Response Header Field (Manual)
     - Identify:
         - URL: https://www.google-analytics.com/analytics.js
         - CWE ID: 200 - Exposure of Sensitive Information to an Unauthorized Actor
@@ -56,7 +56,7 @@ AWASP
         - The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.
     - Prevention:
         - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
-  c - Cross-Domain JavaScript Source File Inclusion
+  - Cross-Domain JavaScript Source File Inclusion
     - Identify:
         - URL: https://www.mbot.org.my/
         - CWE ID: 829 - Inclusion of Functionality from Untrusted Control Sphere
@@ -68,7 +68,7 @@ AWASP
         - The page includes one or more script files from a third-party domain.
     - Prevention:
         - Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.headers.
-  d - Cross-Domain Misconfiguration (Manual)
+  - Cross-Domain Misconfiguration (Manual)
     - Identify:
         - URL: https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js
         - CWE ID: 264 - Permissions, Privileges, and Access Controls
