@@ -28,7 +28,7 @@ AWASP
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
-  #### 1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
+  ### 1. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
   - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
     - Identify:
         - URL: https://www.mbot.org.my/about-us/organization-structure/
@@ -81,7 +81,7 @@ AWASP
         - Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).
         - Configure the "Access-Control-Allow-Origin" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.
   
-  #### 2. Hash Disclosure
+  ### 2. Hash Disclosure
   - Hash Disclosure
     - Identify:
         - URL: https://www.mbot.org.my/MBOT/files/51/51541f6b-7e33-459d-a7e8-33264eae25ca.pdf
@@ -94,9 +94,9 @@ AWASP
         - A hash was disclosed by the web server. - Mac OSX salted SHA-1
     - Prevention:
         - Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser. 
-  #### 3. CSRF (Cross-Site Request Forgery) 
+  ### 3. CSRF (Cross-Site Request Forgery) 
   - No alert for this category
-  #### 4. Secured Cookies
+  ### 4. Secured Cookies
   - Cookie with Samesite Attribute None
   - Cookie without Samesite Attribute 
 
@@ -201,7 +201,7 @@ References:
 
 
 ## Saufi (2018781)
-  ## 8. Cookie Poisoning
+  ### 8. Cookie Poisoning
   - Identify: Reliance on Cookies without Validation and Integrity Checking
     - CWE ID: 565
     - Risk: Information (low)
@@ -229,7 +229,7 @@ References:
   - https://cwe.mitre.org/data/definitions/565.html
   - https://www.techtarget.com/searchsecurity/definition/cookie-poisoning
     
-  ## 9. Potential XSS (Cross-Site Scripting)
+  ### 9. Potential XSS (Cross-Site Scripting)
   - Identify: Protection Mechanism Failure
     - CWE ID: 693
     - Risk: Medium
@@ -279,7 +279,7 @@ References:
   Reference :
   - https://cwe.mitre.org/data/definitions/20.html
 
- ## 10. Information disclosure
+ ### 10. Information disclosure
   - Identify: Exposure of Sensitive Information to an Unauthorized Actor
     - CWE ID: 200
     - WASC ID: 13 (information leakage)
