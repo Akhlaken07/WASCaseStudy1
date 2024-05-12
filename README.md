@@ -8,20 +8,7 @@ AWASP
 - Qoys Al Hanif (2016863)
 - Saufi (2018781)
 
-## Table of Contents
-- [Description of Case Study](#description-of-case-study)
-  1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting)
-  2. [Hash Disclosure](#2-hash-disclosure)
-  3. [CSRF (Cross-Site Request Forgery)](#3-csrf-cross-site-request-forgery)
-  4. [Secured Cookies](#4-secured-cookies)
-  5. [Content Security Policy (CSP)](#5-content-security-policy-csp)
-  6. [JavaScript Libraries](#6-javascript-libraries)
-  7. [HTTPS Implementation (TLS/SSL)](#7-https-implementation-tlsssl)
-  8. [Cookie Poisoning](#8-cookie-poisoning)
-  9. [Potential XSS (Cross-Site Scripting)](#9-potential-xss-cross-site-scripting)
-  10. [Information Disclosure](#10-information-disclosure)
-
-## Assigned Tasks
+  ## Assigned Tasks
 - Muhammad Azhad (2015905)
   - Server OS and Server-Side Scripting used 
   - Hash Disclosure
@@ -35,6 +22,19 @@ AWASP
   - Cookie Poisoning
   - Potential XSS
   - Information Disclosure
+
+## Table of Contents
+- [Description of Case Study](#description-of-case-study)
+  1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting)
+  2. [Hash Disclosure](#2-hash-disclosure)
+  3. [CSRF (Cross-Site Request Forgery)](#3-csrf-cross-site-request-forgery)
+  4. [Secured Cookies](#4-secured-cookies)
+  5. [Content Security Policy (CSP)](#5-content-security-policy-csp)
+  6. [JavaScript Libraries](#6-javascript-libraries)
+  7. [HTTPS Implementation (TLS/SSL)](#7-https-implementation-tlsssl)
+  8. [Cookie Poisoning](#8-cookie-poisoning)
+  9. [Potential XSS (Cross-Site Scripting)](#9-potential-xss-cross-site-scripting)
+  10. [Information Disclosure](#10-information-disclosure)
 
 ## Description of Case Study
   The case study required scanning the website https://www.mbot.org.my using appropriate tools such as ZAP. Below, alerts were identified, followed by evaluations and the preventive measures implemented for the vulnerabilities.
