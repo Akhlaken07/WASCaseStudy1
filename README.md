@@ -8,9 +8,18 @@ AWASP
 - Qoys Al Hanif (2016863)
 - Saufi (2018781)
 
-## Description of Case Study
-
 ## Table of Contents
+ - [Description of Case Study](#Description of Case Study)
+ - Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.) 
+ - Hash Disclosure
+ - CSRF (Cross-Site Request Forgery)
+ - Secured Cookies
+ - CSP
+ - JS Library
+ - HTTPS implentation (TLS/SSL)
+ - Cookie Poisoning
+ - Potential XSS
+ - Information Disclosure
 
 ## Assigned Tasks
 - Muhammad Azhad (2015905)
@@ -27,6 +36,7 @@ AWASP
   ##### 9. Potential XSS
   ##### 10. Information Disclosure
 
+## Description of Case Study
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
