@@ -37,6 +37,7 @@ AWASP
   - Information Disclosure
 
 ## Description of Case Study
+  The case study required scanning the website https://www.mbot.org.my using appropriate tools such as ZAP. Below, alerts were identified, followed by evaluations and the preventive measures implemented for the vulnerabilities.
 
 ## Observation Result
 ### Muhammad Azhad (2015905)
