@@ -56,6 +56,7 @@ AWASP
         - The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.
     - Prevention:
         - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
+          
   - Cross-Domain JavaScript Source File Inclusion
     - Identify:
         - URL: https://www.mbot.org.my/
@@ -68,6 +69,7 @@ AWASP
         - The page includes one or more script files from a third-party domain.
     - Prevention:
         - Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.headers.
+          
   - Cross-Domain Misconfiguration (Manual)
     - Identify:
         - URL: https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js
@@ -101,17 +103,18 @@ AWASP
   ### 4. Secured Cookies
   - Cookie with Samesite Attribute None
     - Identify:
-          - URL: https://www.mbot.org.my/sitemap.xml
-          - CWE ID:1275 - Sensitive Cookie with Improper SameSite Attribute
-          - Risk: Low
-          - Confidence: Medium
-          - <img width="279" alt="Screenshot 2024-05-12 at 11 37 25 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/21edcc92-4110-4ec3-8721-20842a19f035">
-          - <img width="1001" alt="Screenshot 2024-05-12 at 11 22 11 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/a831c0de-90d6-45e0-98e5-923f02949658">
-      - Evaluate:
-          - A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks
-      - Prevention:
-          - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
-  - Cookie without Samesite Attribute
+        - URL: https://www.mbot.org.my/sitemap.xml
+        - CWE ID:1275 - Sensitive Cookie with Improper SameSite Attribute
+        - Risk: Low
+        - Confidence: Medium
+        - <img width="279" alt="Screenshot 2024-05-12 at 11 37 25 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/21edcc92-4110-4ec3-8721-20842a19f035">
+        - <img width="1001" alt="Screenshot 2024-05-12 at 11 22 11 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/a831c0de-90d6-45e0-98e5-923f02949658">
+    - Evaluate:
+        - A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks
+    - Prevention:
+        - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
+
+- Cookie without Samesite Attribute
     - Identify:
         - URL: https://www.mbot.org.my/robots.txt
         - CWE ID:1275 - Sensitive Cookie with Improper SameSite Attribute
