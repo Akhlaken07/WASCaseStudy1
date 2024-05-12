@@ -106,9 +106,7 @@ AWASP
   - JavaScript Libraries
   - HTTPS implementation (TLS/SSL)
 
-### Saufi ()
-- Identify, evaluate, and prevent vulnerabilities of:
-  
+## Saufi   
   ## Cookie Poisoning
   ### 1. Identify: Reliance on Cookies without Validation and Integrity Checking
   - CWE ID: 565
@@ -119,19 +117,22 @@ AWASP
  
   Evaluate:
 
-   When carrying out security-critical tasks, the website depends on the usage or values of cookies, but it does not appropriately verify that the setting is valid for the corresponding user. Attackers may modify cookies by executing client-side code outside of the browser or from within the browser. If cookies are used without thorough validation and integrity testing, attackers may be able to perform injection attacks like SQL injection and cross-site scripting, bypass authentication, and alter inputs in other unanticipated ways.
-  In this case, An attacker may be able to poison cookie values through POST parameters. To test if this is a more serious issue, try resending that request as a GET, with the POST parameter included as a query string parameter.
-  - For instance:  https://nottrusted.com/page?value=maliciousInput.
-User-input was found in the following cookie:
-CMSPreferredCulture=en-US; expires=Tue, 06-May-2025 04:47:37 GMT; path=/; secure; HttpOnly
-The user input was: lng=en-US)
+    When carrying out security-critical tasks, the website depends on the usage or values of cookies, but it does not appropriately verify that the setting is valid for the corresponding user. Attackers may modify cookies by executing client-side code outside of the browser or from within the browser. If cookies are used without thorough validation and integrity testing, attackers may be able to perform injection attacks like SQL injection and cross-site scripting, bypass authentication, and alter inputs in other unanticipated ways.
+
+    In this case, An attacker may be able to poison cookie values through POST parameters. To test if this is a more serious issue, try resending that request as a GET, with the POST parameter included as a query string parameter.
+    - For instance:  https://nottrusted.com/page?value=maliciousInput.
+    User-input was found in the following cookie:
+    CMSPreferredCulture=en-US; expires=Tue, 06-May-2025 04:47:37 GMT; path=/; secure; HttpOnly
+    The user input was: lng=en-US)
 
   Prevent: 
 
-  - Do not allow user input to control cookie names and values. Ensure that semicolons, which can function as name/value pair delimiters, are filtered out if any query string parameters need to be placed in cookie values.
-  - Limiting multipurpose cookies, limiting each cookie to a specific activity is crucial since multipurpose cookies pose many safety risks.
+    - Do not allow user input to control cookie names and values. Ensure that semicolons, which can function as name/value pair delimiters, are filtered out if any query string parameters need to be placed in cookie values.
+    - Limiting multipurpose cookies, limiting each cookie to a specific activity is crucial since multipurpose cookies pose many safety risks.
   
- 
+  Reference:
+  - https://cwe.mitre.org/data/definitions/565.html
+  - https://www.techtarget.com/searchsecurity/definition/cookie-poisoning
     
   ## Potential XSS (Cross-Site Scripting)
    ### 1. Identify: Protection Mechanism Failure
@@ -142,15 +143,46 @@ The user input was: lng=en-US)
 
   Evaluate:
 
-  The website isn't provided with a protection mechanism, or it uses one improperly, which leaves it vulnerable to directed attacks.
-  In this case, the Content Security Policy (CSP) Header Not Set) Content Security Policy (CSP) is an extra security layer that helps in the identification and prevention of specific attack types, such as data injection and Cross Site Scripting (XSS) attacks. Such attacks are used for a variety of purposes, including as malware transmission, site defacement, and data theft. With the help of a set of standard HTTP headers called CSP, website owners can specify which content sources—JavaScript, CSS, HTML frames, fonts, images, and embeddable objects like Java applets, ActiveX, audio, and video files—browsers are permitted to load on their page.
+    The website isn't provided with a protection mechanism, or it uses one improperly, which leaves it vulnerable to directed attacks.
+    In this case, the Content Security Policy (CSP) Header Not Set) Content Security Policy (CSP) is an extra security layer that helps in the identification and prevention of specific attack types, such as data injection and Cross Site Scripting (XSS) attacks. Such attacks are used for a variety of purposes, including as malware transmission, site defacement, and data theft. With the help of a set of standard HTTP headers called CSP, website owners can specify which content sources—JavaScript, CSS, HTML frames, fonts, images, and embeddable objects like Java applets, ActiveX, audio, and video files—browsers are permitted to load on their page.
 
-  Related Attack Patterns: ![attackpattern](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/df2096a8-6715-42ec-9a3b-5e91b5edbda1)
+    Related Attack Patterns: ![attackpattern](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/df2096a8-6715-42ec-9a3b-5e91b5edbda1)
 
   Prevent:
   
-  - Make that the Content-Security-Policy header is set on web server, application server, load balancer, etc. through configuration.
-  - for example: the <meta> element can be used to configure a policy ![csp](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/29c45a92-0b81-400b-b0a8-69428e3fe1de)
+    - Make that the Content-Security-Policy header is set on web server, application server, load balancer, etc. through configuration.
+    - for example: the <meta> element can be used to configure a policy ![csp](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/29c45a92-0b81-400b-b0a8-69428e3fe1de)
+ 
+  Reference:
+  - https://cwe.mitre.org/data/definitions/693.html
+  - https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+
+
+   ### 2. Identify: Improper Input Validation
+  - CWE ID: 20
+  - Risk: Low
+  - Passive (10031 - User Controllable HTML Element Attribute (Potential XSS))
+  - User-controlled HTML attribute values were found , The page at the following URL: https://www.mbot.org.my/registration/mbot-professional-member
+
+  Evaluate:
+
+    When the web server receives input or data, it either fails to validate or validates the data improperly that the input does not contain the necessary attributes for processing the data in a safe and accurate manner.
+
+    A commonly used method for ensuring that potentially hazardous inputs are safe for processing within the code or for connecting with other components is input validation. An attacker can manipulate input into a format that is not anticipated by the rest of the program when software fails to properly validate input. Unintended input will enter the system as a result, changing control flow, allowing arbitrary control over resources, or causing arbitrary code execution.
+
+    In this case, at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability. injecting special characters might be possible. The page at the following URL: https://www.mbot.org.my/registration/mbot-professional-member appears to include user input in: 
+
+    a(n) [input] tag [value] attribute 
+
+    The user input found was:
+    lng=en-US
+
+  Prevent:
+
+    - Validate all input and sanitize output it before writing to any HTML attributes
+  
+  Reference :
+  - https://cwe.mitre.org/data/definitions/20.html
 
  ## Information disclosure
    ### 1. Identify: Exposure of Sensitive Information to an Unauthorized Actor
@@ -162,37 +194,36 @@ The user input was: lng=en-US)
 
   Evaluate:
 
-  Exposure of sensetive information to an unauthorized actor mean when a user of the web server accesses sensitive information, they are not granted express authorization to do so.
-  Errors can in many different forms and can lead to information exposures. Depending on the environment in which the product functions, the kind of private information that is disclosed, and the advantages it can offer an attacker, the error's severity could differ significantly.
+    Exposure of sensetive information to an unauthorized actor mean when a user of the web server accesses sensitive information, they are not granted express authorization to do so.
+    Errors can in many different forms and can lead to information exposures. Depending on the environment in which the product functions, the kind of private information that is disclosed, and the advantages it can offer an attacker, the error's severity could differ significantly.
 
-  Some kinds of sensitive information include:
-  - private, personal information, such as personal messages, financial data, health records,  geographic location, or contact details
-  - system status and environment, such as the operating system and installed packages
-  - business secrets and intellectual property
-  - network status and configuration
-  - the product's own code or internal state
-  - metadata, e.g. logging of connections or message headers
-  - indirect information, such as a discrepancy between two internal operations that can be observed by an outsider
+    Some kinds of sensitive information include:
+    - private, personal information, such as personal messages, financial data, health records,  geographic location, or contact details
+    - system status and environment, such as the operating system and installed packages
+    - business secrets and intellectual property
+    - network status and configuration
+    - the product's own code or internal state
+    - metadata, e.g. logging of connections or message headers
+    - indirect information, such as a discrepancy between two internal operations that can be observed by an outsider
 
-  In this case, a bug is found which the response appears to contain suspicious comments which may help an attacker. The following pattern was used: \bBUG\b and was detected in the element starting with: "<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fMBOT%2fie10-viewport-bug-workaround.js" type="tex", see evidence field for the suspicious comment/snippet.
+    In this case, a bug is found which the response appears to contain suspicious comments which may help an attacker. The following pattern was used: \bBUG\b and was detected in the element starting with: "<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fMBOT%2fie10-viewport-bug-workaround.js" type="tex", see evidence field for the suspicious comment/snippet.
 
   Related info
 
-  - CWE-200 is commonly misused to represent the loss of confidentiality in a vulnerability, but confidentiality loss is a technical impact - not a root cause error. As of CWE 4.9, over 400 CWE entries can lead to a loss of confidentiality.
+    - CWE-200 is commonly misused to represent the loss of confidentiality in a vulnerability, but confidentiality loss is a technical impact - not a root cause error. As of CWE 4.9, over 400 CWE entries can lead to a loss of confidentiality.
 ![observer](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/1f4de974-5413-4f45-82b0-cce119701fa1)
 
   Prevent:
 
-  - Eliminate any comments that go back to information that could aid an attacker and fix any underlying issues they bring up.
-  - Disable directory listing to prevent exposure of web site structure and potentially sensitive files
-  - Disable error reporting output into the client's browser
-  - Use custom error pages that prevent from displaying excessive system information
+    - Eliminate any comments that go back to information that could aid an attacker and fix any underlying issues they bring up.
+    - Disable directory listing to prevent exposure of web site structure and potentially sensitive files
+    - Disable error reporting output into the client's browser
+    - Use custom error pages that prevent from displaying excessive system information
 
-## References
+  Reference:
+  - https://cwe.mitre.org/data/definitions/200.html
+  - http://projects.webappsec.org/w/page/13246936/Information%20Leakage
 
-- https://cwe.mitre.org/data/definitions/565.html
-- https://www.techtarget.com/searchsecurity/definition/cookie-poisoning
-- https://cwe.mitre.org/data/definitions/693.html
-- https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
-- https://cwe.mitre.org/data/definitions/200.html
-- http://projects.webappsec.org/w/page/13246936/Information%20Leakage
+
+
+
