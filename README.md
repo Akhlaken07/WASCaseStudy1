@@ -43,6 +43,9 @@ AWASP
         - The web/application server is leaking information via one or more "X-Powered-By" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.
     - Prevention:
         - Ensure that your web server, application server, load balancer, etc. is configured to suppress "X-Powered-By" headers.
+    - References
+      - https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework
+https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html
 
   - Server Leaks Version Information via "Server" HTTP Response Header Field (Manual)
     - Identify:
@@ -56,6 +59,10 @@ AWASP
         - The web/application server is leaking version information via the "Server" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.
     - Prevention:
         - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
+    - Reference
+      - https://httpd.apache.org/docs/current/mod/core.html#servertokens
+https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)
+https://www.troyhunt.com/shhh-dont-let-your-response-headers/
           
   - Cross-Domain JavaScript Source File Inclusion
     - Identify:
@@ -84,6 +91,8 @@ AWASP
     - Prevention:
         - Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).
         - Configure the "Access-Control-Allow-Origin" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.
+    - Reference
+      - https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy
   
   ### 2. Hash Disclosure
   - Hash Disclosure
@@ -97,7 +106,9 @@ AWASP
     - Evaluate:
         - A hash was disclosed by the web server. - Mac OSX salted SHA-1
     - Prevention:
-        - Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser. 
+        - Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser.
+    - Reference
+      - https://openwall.info/wiki/john/sample-hashes
   ### 3. CSRF (Cross-Site Request Forgery) 
   - No alert for this category
   ### 4. Secured Cookies
@@ -113,6 +124,8 @@ AWASP
         - A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks
     - Prevention:
         - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
+    - Reference
+      - https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site
 
 - Cookie without Samesite Attribute
     - Identify:
@@ -126,6 +139,8 @@ AWASP
         - A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.
     - Prevention:
         - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
+    - Reference
+      - https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site
 
 ### Qoys Al Hanif (2016863)
 
