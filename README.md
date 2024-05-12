@@ -99,8 +99,30 @@ AWASP
   ### 3. CSRF (Cross-Site Request Forgery) 
   - No alert for this category
   ### 4. Secured Cookies
-  a - Cookie with Samesite Attribute None
-  b - Cookie without Samesite Attribute 
+  - Cookie with Samesite Attribute None
+    - Identify:
+          - URL: https://www.mbot.org.my/sitemap.xml
+          - CWE ID:1275 - Sensitive Cookie with Improper SameSite Attribute
+          - Risk: Low
+          - Confidence: Medium
+          - <img width="279" alt="Screenshot 2024-05-12 at 11 37 25 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/21edcc92-4110-4ec3-8721-20842a19f035">
+          - <img width="1001" alt="Screenshot 2024-05-12 at 11 22 11 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/a831c0de-90d6-45e0-98e5-923f02949658">
+      - Evaluate:
+          - A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks
+      - Prevention:
+          - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
+  - Cookie without Samesite Attribute
+    - Identify:
+        - URL: https://www.mbot.org.my/robots.txt
+        - CWE ID:1275 - Sensitive Cookie with Improper SameSite Attribute
+        - Risk: Low
+        - Confidence: Medium
+        - <img width="261" alt="Screenshot 2024-05-12 at 11 37 34 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/10e8228d-8b4e-47cd-82fc-d26bc793a559">
+        - <img width="1001" alt="Screenshot 2024-05-12 at 11 24 06 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/42a94a1c-b62e-4458-9d7a-f498c943d9f2">
+    - Evaluate:
+        - A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.
+    - Prevention:
+        - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
 
 ### Qoys Al Hanif (2016863)
 
