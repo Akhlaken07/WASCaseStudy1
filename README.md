@@ -10,16 +10,16 @@ AWASP
 
 ## Table of Contents
  - [Description of Case Study](#description-of-case-study)
- - Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.) 
- - Hash Disclosure
- - CSRF (Cross-Site Request Forgery)
- - Secured Cookies
- - CSP
- - JS Library
- - HTTPS implentation (TLS/SSL)
- - Cookie Poisoning
- - Potential XSS
- - Information Disclosure
+ - [Server OS and Server-Side Scripting](#server-os-and-server-side-scripting-used-windows-or-linux-php-or-aspnet-or-javascript-etc)
+ - [Hash Disclosure](#hash-disclosure)
+ - [CSRF (Cross-Site Request Forgery)](#csrf-cross-site-request-forgery)
+ - [Secured Cookies](#secured-cookies)
+ - [CSP (Content Security Policy)](#csp)
+ - [JS Library](#js-library)
+ - [HTTPS Implementation (TLS/SSL)](#https-implementation-tlsssl)
+ - [Cookie Poisoning](#cookie-poisoning)
+ - [Potential XSS (Cross-Site Scripting)](#potential-xss-cross-site-scripting)
+ - [Information Disclosure](#information-disclosure)
 
 ## Assigned Tasks
 - Muhammad Azhad (2015905)
