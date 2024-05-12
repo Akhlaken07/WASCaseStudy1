@@ -1,4 +1,4 @@
-# WASCaseStudy1
+--# WASCaseStudy1
 
 ## Group Name
 AWASP
@@ -70,16 +70,40 @@ The user input was: lng=en-US)
   - for example: the <meta> element can be used to configure a policy ![csp](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/29c45a92-0b81-400b-b0a8-69428e3fe1de)
 
  ## Information disclosure
-   ### 1. Identify: 
-  - CWE ID: 
-  - Risk:
-  - Source:
-  - 
+   ### 1. Identify: Exposure of Sensitive Information to an Unauthorized Actor
+  - CWE ID: 200
+  - WASC ID: 13 (information leakage)
+  - Risk:low
+  - Source: Passive (10027 - Information Disclosure - Suspicious  Comments)
+  - The response appears to contain suspicious comments which may help an attacker.
 
   Evaluate:
 
+  Exposure of sensetive information to an unauthorized actor mean when a user of the web server accesses sensitive information, they are not granted express authorization to do so.
+  Errors can in many different forms and can lead to information exposures. Depending on the environment in which the product functions, the kind of private information that is disclosed, and the advantages it can offer an attacker, the error's severity could differ significantly.
+
+  Some kinds of sensitive information include:
+  - private, personal information, such as personal messages, financial data, health records,  geographic location, or contact details
+  - system status and environment, such as the operating system and installed packages
+  - business secrets and intellectual property
+  - network status and configuration
+  - the product's own code or internal state
+  - metadata, e.g. logging of connections or message headers
+  - indirect information, such as a discrepancy between two internal operations that can be observed by an outsider
+
+  In this case, a bug is found which the response appears to contain suspicious comments which may help an attacker. The following pattern was used: \bBUG\b and was detected in the element starting with: "<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fMBOT%2fie10-viewport-bug-workaround.js" type="tex", see evidence field for the suspicious comment/snippet.
+
+  Related info
+
+  - CWE-200 is commonly misused to represent the loss of confidentiality in a vulnerability, but confidentiality loss is a technical impact - not a root cause error. As of CWE 4.9, over 400 CWE entries can lead to a loss of confidentiality.
+![observer](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/1f4de974-5413-4f45-82b0-cce119701fa1)
+
   Prevent:
-  
+
+  - Eliminate any comments that go back to information that could aid an attacker and fix any underlying issues they bring up.
+  - Disable directory listing to prevent exposure of web site structure and potentially sensitive files
+  - Disable error reporting output into the client's browser
+  - Use custom error pages that prevent from displaying excessive system information
 
 
 ## Table of Contents
@@ -94,3 +118,5 @@ The user input was: lng=en-US)
 - https://www.techtarget.com/searchsecurity/definition/cookie-poisoning
 - https://cwe.mitre.org/data/definitions/693.html
 - https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+- https://cwe.mitre.org/data/definitions/200.html
+- http://projects.webappsec.org/w/page/13246936/Information%20Leakage
