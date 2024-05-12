@@ -101,10 +101,105 @@ AWASP
   - Cookie without Samesite Attribute 
 
 ### Qoys Al Hanif (2016863)
-- Identify, evaluate, and prevent vulnerabilities of:
-  - Content Security Policy (CSP)
-  - JavaScript Libraries
-  - HTTPS implementation (TLS/SSL)
+
+
+### Content Security Policy (CSP)
+
+#### Identify:
+
+-   Risk level: medium
+-   Confidence: high
+-   CWE ID: 693
+-   Content Security Policy (CSP) Header Not Set in 553 files
+-   ![image](https://github.com/Akhlaken07/WASCaseStudy1/assets/96472091/0c7306f9-e20a-4cdf-ac2f-ee6b02063d53)
+
+-  One of them is the main file: https://www.mbot.org.my/
+-  ![image](https://github.com/Akhlaken07/WASCaseStudy1/assets/96472091/9a4160ec-934b-4abe-8adc-41c995d5ed5b)
+- Attackers can inject malicious scripts into web pages viewed by other users when the loaded script sources are revealed in the script tags. This is why CSP often disallows inline JavaScript within HTML/PHP
+
+
+
+#### Evaluate:
+
+Content Security Policy (CSP) acts as a robust security tool that helps websites detect and prevent various threats, such as Cross-Site Scripting (XSS) attacks and data injection vulnerabilities. Essentially, CSP serves as a protective barrier for websites, identifying and blocking potentially harmful content. For example, in XSS attacks, hackers exploit the trustworthiness of websites to insert malicious code, which browsers then unwittingly execute alongside legitimate content from trusted sources.
+
+CWE-693, known as "protection mechanism failure," refers to situations where a web application either lacks or inadequately implements protective measures against targeted attacks. This failure can occur in three different scenarios: a "missing" protection mechanism indicates a complete absence of defenses against specific attack methods, an "insufficient" mechanism provides only partial protection against common threats, leaving vulnerabilities, and an "ignored" mechanism implies that although the protective measure exists, developers have not applied it in certain parts of the codebase.
+
+#### Prevent:
+-   Configure the webserver to return the Content-Security-Policy HTTP Header with values controlling which resources the browser can load for the page
+-   Writing JavaScript and CSS with CSP in mind
+    -   Because it constantly executes in the current context, inline code is a major injection vector that cannot be restricted. When CSP is enabled, it, by default, blocks all inline code. This implies no inline styles or scripts, including inline event handlers or javascript: URLs. Thus any new code should adhere to best practices and only utilize external script and style files.
+-   Page-level CSP directives
+    -   Use the sandbox directive to treat the page as if inside a sandboxed iframe. To increase security on older websites with many legacy HTTP pages, use the upgrade-unsafe-requests directive to rewrite insecure URLs. This directs user agents to transition HTTP to HTTPS in URL schemes and is useful when still having various HTTP URLs.
+
+Reference:
+
+-   [https://www.invicti.com/blog/web-security/content-security-policy/](https://www.invicti.com/blog/web-security/content-security-policy/)
+-   [https://cwe.mitre.org/data/definitions/693.html](https://cwe.mitre.org/data/definitions/693.html)
+
+### JavaScript Libraries
+
+
+
+#### Identify:
+
+
+
+-   Identifies as Vulnerable JS Library
+-   The risk is medium
+-   CWE ID 829 (Inclusion of Functionality from Untrusted Control Sphere)
+-   The identified library bootstrap, version 3.3.7 is vulnerable in the file https://www.mbot.org.my/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fMBOT%2fbootstrap.js
+-   ![image](https://github.com/Akhlaken07/WASCaseStudy1/assets/96472091/c69acda2-61dc-4bca-925c-01687bb9b249)
+
+-   The identified library moment.js, version 2.9.0 is vulnerable in the file https://www.mbot.org.my/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fMBOT%2fmoment-with-locales.js
+-   ![image](https://github.com/Akhlaken07/WASCaseStudy1/assets/96472091/6127d117-2e80-40a3-a7ff-4b35cc7a8a9a)
+
+-   The identified library jquery, version 2.2.4 is vulnerable in the file https://www.mbot.org.my/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js
+-   ![image](https://github.com/Akhlaken07/WASCaseStudy1/assets/96472091/0d16a3b7-d32c-4fbc-b198-11f855a08a3b)
+
+
+
+
+
+
+#### Evaluate:
+
+
+
+A JS library that is missing security patches can make the website extremely vulnerable to various attacks. Third-party JS libraries can draw a variety of DOM-based vulnerabilities, including DOM-XSS, which can be exploited to hijack user accounts. Popular JS libraries typically have the advantage of being heavily audited. This also means that the flaws are quickly recognized and patched, resulting in a steady stream of security updates. Using a library with missing security patches can make the website exceptionally easy to abuse, making it crucial to ensure that any available security updates are to be applied immediately.
+
+Related:
+
+-   CVE-2020-11023: In jQuery versions greater than or equal to 1.0.3 and before 3.5.0, passing HTML containing elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
+-   CVE-2020-11022: In jQuery versions greater than or equal to 1.2 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
+-   CVE-2015-9251: jQuery before 3.0.0 is vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain Ajax request is performed without the dataType option, causing text/javascript responses to be executed.
+-   CVSS Score 4.3
+-   This vulnerability is related with cross site scripting.
+
+#### Prevent:
+
+
+-   Upgrade to the latest version of jquery.
+-   Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.
+-   When the set of acceptable objects, such as filenames or URLs, is limited or known, create a mapping from a set of fixed input values (such as numeric IDs) to the actual filenames or URLs, and reject all other inputs.
+-   For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602 (Client-Side Enforcement of Server-Side Security). Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.
+
+References: 
+-  [https://cwe.mitre.org/data/definitions/829.html](https://cwe.mitre.org/data/definitions/829.html)
+-  [https://beaglesecurity.com/blog/vulnerability/vulnerable-javascript-library.html](https://beaglesecurity.com/blog/vulnerability/vulnerable-javascript-library.html)
+
+### HTTPS implementation (TLS/SSL)
+
+#### Identify:
+-   There is no alert found on OWASP ZAP and no risk level and CWE ID can be identified.
+
+#### Evaluate:
+-   Not available since there is https implementation for this website that can be seen at the URL of the website. However, content which was initially accessed via HTTPS (i.e.: using SSL/TLS encryption) is also accessible via HTTP (without encryption).
+
+#### Prevent:
+-   Not available for the website. However, the solution for this alert is ensure that the web server, application server, load balancer, etc. is configured to only serve such content via HTTPS. Consider implementing HTTP Strict Transport Security.
+
+
 
 ## Saufi   
   ## Cookie Poisoning
