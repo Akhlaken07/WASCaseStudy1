@@ -89,7 +89,7 @@ AWASP
         - Risk: High
         - Confidence: Medium
         - <img width="316" alt="Screenshot 2024-05-12 at 11 33 45 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/2dbeea97-898e-4d9b-90bf-cf8a11a0bcc6">
-         - <img width="396" alt="Screenshot 2024-05-12 at 11 31 05 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/ad6dde43-d10b-4539-a45e-c310e8faa641">
+        - <img width="396" alt="Screenshot 2024-05-12 at 11 31 05 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/ad6dde43-d10b-4539-a45e-c310e8faa641">
     - Evaluate:
         - A hash was disclosed by the web server. - Mac OSX salted SHA-1
     - Prevention:
