@@ -11,11 +11,18 @@ AWASP
 ## Assigned Tasks
 
 ### Muhammad Azhad (2015905)
-- Identify, evaluate, and prevent vulnerabilities of:
-  - Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
-  - Hash Disclosure
-  - CSRF (Cross-Site Request Forgery)
-  - Secured Cookies
+### Identify, evaluate, and prevent vulnerabilities of:
+  #### Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.)
+  - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
+  - Server Leaks Version Information via "Server" HTTP Response Header Field (Manual)
+  - Cross-Domain JavaScript Source File Inclusion
+  - Cross-Domain Misconfiguration (Manual) 
+  
+  #### Hash Disclosure
+  #### CSRF (Cross-Site Request Forgery)
+  #### Secured Cookies
+  - Cookie with Samesite Attribute None
+  - Cookie without Samesite Attribute 
 
 ### Qoys Al Hanif (2016863)
 - Identify, evaluate, and prevent vulnerabilities of:
