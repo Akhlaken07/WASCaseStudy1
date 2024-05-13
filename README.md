@@ -35,6 +35,7 @@ AWASP
   8. [Cookie Poisoning](#8-cookie-poisoning)
   9. [Potential XSS (Cross-Site Scripting)](#9-potential-xss-cross-site-scripting)
   10. [Information Disclosure](#10-information-disclosure)
+- [Weekly Progress](#weekly-progress)
 
 ## Description of Case Study
   The Malaysia Board of Technology (MBOT) website, located at https://www.mbot.org.my, is the designated web application. In this case study, our team will use OWASP ZAP to manually and automatically scan the website in order to find any vulnerabilities in the web application. The vast number of webpages on the site means that we will primarily be concentrating on automated scanning.
@@ -375,6 +376,9 @@ References:
   Reference:
   - https://cwe.mitre.org/data/definitions/200.html
   - http://projects.webappsec.org/w/page/13246936/Information%20Leakage
+
+## Weekly Progress
+  
 
 
 
