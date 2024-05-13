@@ -107,7 +107,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
     - Prevention:
         - Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).
         - Configure the "Access-Control-Allow-Origin" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.
-    - Reference
+    - References
       - https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy
   
   ## 2. Hash Disclosure
@@ -155,7 +155,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
         - A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.
     - Prevention:
         - Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.
-    - Reference
+    - References
       - https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site
 
 ### Qoys Al Hanif (2016863)
@@ -189,7 +189,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
   -   Page-level CSP directives
       -   Use the sandbox directive to treat the page as if inside a sandboxed iframe. To increase security on older websites with many legacy HTTP pages, use the upgrade-unsafe-requests directive to rewrite insecure URLs. This directs user agents to transition HTTP to HTTPS in URL schemes and is useful when still having various HTTP URLs.
 
-Reference:
+References:
 
 -   [https://www.invicti.com/blog/web-security/content-security-policy/](https://www.invicti.com/blog/web-security/content-security-policy/)
 -   [https://cwe.mitre.org/data/definitions/693.html](https://cwe.mitre.org/data/definitions/693.html)
@@ -285,7 +285,7 @@ References:
     - Do not allow user input to control cookie names and values. Ensure that semicolons, which can function as name/value pair delimiters, are filtered out if any query string parameters need to be placed in cookie values.
     - Limiting multipurpose cookies, limiting each cookie to a specific activity is crucial since multipurpose cookies pose many safety risks.
   
-  Reference:
+  References:
   - https://cwe.mitre.org/data/definitions/565.html
   - https://www.techtarget.com/searchsecurity/definition/cookie-poisoning
     
@@ -308,7 +308,7 @@ References:
     - Make that the Content-Security-Policy header is set on web server, application server, load balancer, etc. through configuration.
    for example: the meta element can be used to configure a policy ![csp](https://github.com/Akhlaken07/WASCaseStudy1/assets/148375277/29c45a92-0b81-400b-b0a8-69428e3fe1de)
  
-  Reference:
+  References:
   - https://cwe.mitre.org/data/definitions/693.html
   - https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
@@ -336,7 +336,7 @@ References:
 
     - Validate all input and sanitize output it before writing to any HTML attributes
   
-  Reference :
+  References:
   - https://cwe.mitre.org/data/definitions/20.html
 
  ## 10. Information disclosure
@@ -375,7 +375,7 @@ References:
     - Disable error reporting output into the client's browser
     - Use custom error pages that prevent from displaying excessive system information
 
-  Reference:
+  References:
   - https://cwe.mitre.org/data/definitions/200.html
   - http://projects.webappsec.org/w/page/13246936/Information%20Leakage
 
