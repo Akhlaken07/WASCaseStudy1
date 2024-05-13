@@ -44,6 +44,7 @@ The table of contents lists the alerts that were observed. We will also indicate
 
 
 ## Observation Result
+- <img width="1177" alt="Screenshot 2024-05-13 at 8 22 43 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/600dea02-016b-45b4-b394-0c69db1bc0b9">
 ### Muhammad Azhad (2015905)
   ## 1. Server OS and Server-Side Scripting  
   - Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
