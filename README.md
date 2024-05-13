@@ -25,6 +25,7 @@ AWASP
 
 ## Table of Contents
 - [Description of Case Study](#description-of-case-study)
+- [Observation Result](#observation-result)
   1. [Server OS and Server-Side Scripting](#1-server-os-and-server-side-scripting)
   2. [Hash Disclosure](#2-hash-disclosure)
   3. [CSRF (Cross-Site Request Forgery)](#3-csrf-cross-site-request-forgery)
