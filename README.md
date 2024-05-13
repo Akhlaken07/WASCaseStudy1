@@ -223,7 +223,9 @@ Reference:
   A JS library that is missing security patches can make the website extremely vulnerable to various attacks. Third-party JS libraries can draw a variety of DOM-based vulnerabilities, including DOM-XSS, which can be exploited to hijack user accounts. Popular JS libraries typically have the advantage of being heavily audited. This also means that the flaws are quickly recognized and patched, resulting in a steady stream of security updates. Using a library with missing security patches can make the website exceptionally easy to abuse, making it crucial to ensure that any available security updates are to be applied immediately.
 
   Related:
-  
+
+  -   CVE-2019-8331: In Bootstrap before 3.4.1 and 4.3.x before 4.3.1, XSS is possible in the tooltip or popover data-template attribute.
+  -   CVE-2022-24785: Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. 
   -   CVE-2020-11023: In jQuery versions greater than or equal to 1.0.3 and before 3.5.0, passing HTML containing elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
   -   CVE-2020-11022: In jQuery versions greater than or equal to 1.2 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
   -   CVE-2015-9251: jQuery before 3.0.0 is vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain Ajax request is performed without the dataType option, causing text/javascript responses to be executed.
@@ -233,7 +235,7 @@ Reference:
 - Prevent:
 
 
-  -   Upgrade to the latest version of jquery.
+  -   Upgrade to the latest version of bootstrap, moment.js, and jquery.
   -   Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.
   -   When the set of acceptable objects, such as filenames or URLs, is limited or known, create a mapping from a set of fixed input values (such as numeric IDs) to the actual filenames or URLs, and reject all other inputs.
   -   For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602 (Client-Side Enforcement of Server-Side Security). Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.
@@ -248,7 +250,7 @@ References:
   -   There is no alert found on OWASP ZAP and no risk level and CWE ID can be identified.
 
 - Evaluate:
-  -   Not available since there is https implementation for this website that can be seen at the URL of the website. However, content which was initially accessed via HTTPS (i.e.: using SSL/TLS encryption) is also accessible via HTTP (without encryption).
+  -   Not available since there is https implementation for this website that can be seen at the URL of the website. 
 
 - Prevent:
   -   Not available for the website. However, the solution for this alert is ensure that the web server, application server, load balancer, etc. is configured to only serve such content via HTTPS. Consider implementing HTTP Strict Transport Security.
