@@ -97,7 +97,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
         - Risk: Medium
         - Confidence: Medium 
         - <img width="274" alt="Screenshot 2024-05-12 at 11 33 33 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/812b07b6-6dbc-408e-8072-660d2e2ce891">
-        - <img width="900" alt="Screenshot 2024-05-11 at 10 33 36 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/382d198b-1205-458b-ae1e-40dbc8defcdd">
+        - <img width="693" alt="Screenshot 2024-05-12 at 11 29 22 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/a19cd874-8d1b-445f-af8a-5bd3090ca87b">
     - Evaluate:
         - Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server
         - The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.
