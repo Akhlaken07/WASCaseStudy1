@@ -379,7 +379,10 @@ References:
   - http://projects.webappsec.org/w/page/13246936/Information%20Leakage
 
 ## Weekly Progress
-  
+  - <img width="745" alt="Screenshot 2024-05-13 at 2 05 26 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/929951b5-5dc6-4d82-bd7d-1ba593e37347">
+  - <img width="721" alt="Screenshot 2024-05-13 at 2 05 39 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/ad2d70af-e5fa-4b95-a0c9-d91303613160">
+
+
 
 
 
