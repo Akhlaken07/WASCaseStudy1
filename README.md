@@ -96,7 +96,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
         - CWE ID: 264 - Permissions, Privileges, and Access Controls
         - Risk: Medium
         - Confidence: Medium 
-        - <img width="382" alt="Screenshot 2024-05-11 at 10 18 26 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/3c2ff08f-281d-47a5-97b6-2ac17cb7f328">
+        - <img width="274" alt="Screenshot 2024-05-12 at 11 33 33 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/812b07b6-6dbc-408e-8072-660d2e2ce891">
         - <img width="900" alt="Screenshot 2024-05-11 at 10 33 36 PM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/382d198b-1205-458b-ae1e-40dbc8defcdd">
     - Evaluate:
         - Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server
@@ -114,7 +114,7 @@ https://www.troyhunt.com/shhh-dont-let-your-response-headers/
         - CWE ID: 200 - Exposure of Sensitive Information to an Unauthorized Actor
         - Risk: High
         - Confidence: Medium
-        - <img width="274" alt="Screenshot 2024-05-12 at 11 33 33 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/79cfe8b7-eff5-4da8-b480-560b5a6a44de">
+        - <img width="316" alt="Screenshot 2024-05-12 at 11 33 45 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/0a9a4662-a483-4a98-899f-e0be7c20de38">
         - <img width="396" alt="Screenshot 2024-05-12 at 11 31 05 AM" src="https://github.com/Akhlaken07/WASCaseStudy1/assets/148112697/ad6dde43-d10b-4539-a45e-c310e8faa641">
     - Evaluate:
         - A hash was disclosed by the web server. - Mac OSX salted SHA-1
